@@ -35,24 +35,24 @@ const ImgLogo = styled.img`
   width: 50px;
 `;
 
-const ButtonSign = styled.div`
-  justify-content: center;
-`;
-const Button = styled.button`
-  color: white;
-  border-color: transparent;
-  background-color: transparent;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 16px;
-`;
+// const ButtonSign = styled.div`
+//   justify-content: center;
+// `;
+// const Button = styled.button`
+//   color: white;
+//   border-color: transparent;
+//   background-color: transparent;
+//   margin-left: auto;
+//   margin-right: auto;
+//   font-size: 16px;
+// `;
 
-const SignImg = styled.img`
-  width: 32px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-`;
+// const SignImg = styled.img`
+//   width: 32px;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+// `;
 
 const Login = styled.button`
   color: white;

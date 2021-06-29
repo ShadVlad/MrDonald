@@ -16,7 +16,7 @@ const OrderItemStyled = styled.li`
 
 const ItemName = styled.span`
   flex-grow: 1;
-`;
+`; // max-width: 60%;
 
 const ItemCount = styled.span``;
 

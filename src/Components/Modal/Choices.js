@@ -24,7 +24,7 @@ export function Choices({ openItem, choice, changeChoices }) {
       <h3>Выбирайте: </h3>
       <ChoiceWrap>
         {openItem.choices.map((item, i) => (
-          <ChoiceLabel>
+          <ChoiceLabel key={i}>
             <ChoiceRadio
               type="radio"
               name="choices"

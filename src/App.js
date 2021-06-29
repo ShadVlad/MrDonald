@@ -10,6 +10,7 @@ import { Order } from "./Components/Order/Order";
 import { useOpenItem } from "./Components/Hooks/useOpenItem";
 import { useOrders } from "./Components/Hooks/useOrders";
 import { useAuth } from "./Components/Hooks/useAuth";
+import { useTitle } from "./Components/Hooks/useTitle";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD4NLCvLq4840D-EM97aJuXBMFaVR5HF-8",
@@ -28,6 +29,7 @@ function App() {
   const openItem = useOpenItem();
   //console.log("Item: ", openItem);
   const orders = useOrders();
+  useTitle(openItem.openItem);
   return (
     <>
       <GlobalStyle />

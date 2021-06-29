@@ -9,7 +9,6 @@ const ToppingWrap = styled.div`
 `;
 
 const ToppingLabel = styled.label`
-  cursor: pointer;
   display: block;
 `;
 
@@ -24,7 +23,7 @@ export function Toppings({ toppings, checkToppings }) {
       <h3>Добавки</h3>
       <ToppingWrap>
         {toppings.map((item, i) => (
-          <ToppingLabel>
+          <ToppingLabel key={i}>
             <ToppingCheckbox
               type="checkbox"
               checked={item.checked}
