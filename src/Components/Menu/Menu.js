@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ListItem } from "./ListItem";
 import { Banner } from "./Banner";
-import { Context } from "../Functions/context";
+//import { Context } from "../Functions/context";
 //import { useFetch } from "../Hooks/useFetch";
 
 const MenuStyled = styled.main`
@@ -18,9 +18,9 @@ const SectionMenu = styled.section`
 export const Menu = ({ dbMenu }) => {
   // const res = useFetch();
   // const dbMenu = res.response;
-  const {
-    openItem: { setOpenItem },
-  } = useContext(Context);
+  // const {
+  //   openItem: { setOpenItem },
+  // } = useContext(Context);
 
   return (
     <MenuStyled>
@@ -29,11 +29,17 @@ export const Menu = ({ dbMenu }) => {
         <>
           <SectionMenu>
             <h2>Бургеры</h2>
-            <ListItem itemList={dbMenu.burger} setOpenItem={setOpenItem} />
+            <ListItem
+              itemList={dbMenu.burger}
+              //setOpenItem={setOpenItem}
+            />
           </SectionMenu>
           <SectionMenu>
             <h2>Закуски / напитки</h2>
-            <ListItem itemList={dbMenu.other} setOpenItem={setOpenItem} />
+            <ListItem
+              itemList={dbMenu.other}
+              //setOpenItem={setOpenItem}
+            />
           </SectionMenu>
         </>
       ) : (

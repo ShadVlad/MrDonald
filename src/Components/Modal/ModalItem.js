@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { ButtonCheckout } from "../Style/ButtonCheckout";
 import { formatCurrency } from "../Functions/secondaryFunction";
@@ -9,6 +9,7 @@ import { Choices } from "./Choices";
 import { useCount } from "../Hooks/useCount";
 import { useToppings } from "../Hooks/UseToppings";
 import { useChoices } from "../Hooks/useChoices";
+import { Context } from "../Functions/context";
 
 export const Overlay = styled.div`
   position: fixed;
@@ -58,7 +59,12 @@ const TotalPrice = styled.div`
   justify-content: space-between;
 `;
 
-export const ModalItem = ({ openItem, setOpenItem, orders, setOrders }) => {
+export const ModalItem = () => {
+  const {
+    orders: { orders, setOrders },
+    openItem: { openItem, setOpenItem },
+  } = useContext(Context);
+
   const counter = useCount(openItem.count);
   const toppings = useToppings(openItem);
   const choices = useChoices(openItem);

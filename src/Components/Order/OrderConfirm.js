@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { ButtonCheckout } from "../Style/ButtonCheckout";
 import { Overlay } from "../Modal/ModalItem";
@@ -8,6 +8,7 @@ import {
   formatCurrency,
   projection,
 } from "../Functions/secondaryFunction";
+import { Context } from "../Functions/context";
 
 const Modal = styled.div`
   background-color: white;
@@ -40,14 +41,15 @@ const sendOrder = (database, orders, authentication) => {
   });
 };
 
-export const OrderConfirm = ({
-  orders,
-  setOrders,
-  authentication,
-  setOpenOrderConfirm,
-  database,
-}) => {
+export const OrderConfirm = () => {
   //console.log("dataBase: ", dataBase);
+  const {
+    orders: { orders, setOrders },
+    auth: { authentication },
+    orderConfirm: { setOpenOrderConfirm },
+    database,
+  } = useContext(Context);
+
   const total = orders.reduce(
     (result, order) => totalPriceItems(order) + result,
     0
