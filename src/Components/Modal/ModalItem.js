@@ -10,7 +10,7 @@ import { useCount } from "../Hooks/useCount";
 import { useToppings } from "../Hooks/UseToppings";
 import { useChoices } from "../Hooks/useChoices";
 
-const Overlay = styled.div`
+export const Overlay = styled.div`
   position: fixed;
   display: flex;
   justify-content: center;
